@@ -69,26 +69,97 @@
       display: block;
     }
 
-    /* Hero Section */
+    /* Banner */
     .hero {
       width: 100%;
       height: 500px;
       background: url('banner.jpg') no-repeat center center/cover;
     }
 
-    h1 {
-      margin-top: 30px;
-      color: #0056b3;
+    /* Profile Image */
+    .profile {
+      margin-top: -100px;
     }
 
-    p {
-      max-width: 800px;
-      margin: 20px auto;
+    .profile img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      background-color: white;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 40px 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Typing Study Button */
+    .typing-button {
+      margin: 30px;
+    }
+
+    .typing-button a {
+      background-color: #0056b3;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
       font-size: 18px;
-      line-height: 1.6;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .typing-button a:hover {
+      background-color: #003d80;
+    }
+
+    /* Calendar */
+    .calendar {
+      margin: 40px 20px;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      max-width: 700px;
+      height: 500px;
+    }
+
+    /* Visitor Counter */
+    .visitor {
+      margin: 40px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      background-color: #0056b3;
+      color: white;
+      padding: 10px;
+      font-size: 14px;
     }
   </style>
 </head>
+
 <body>
 
 <!-- Navbar -->
@@ -138,12 +209,48 @@
   <a href="profile.html">ข้อมูลประวัติ</a>
 </div>
 
-<!-- Hero Section -->
+<!-- Hero Banner -->
 <section class="hero"></section>
 
-<!-- Main Content -->
-<h1>สวัสดีครับ ยินดีต้อนรับ!</h1>
-<p>นี่คือเว็บไซต์ของครู Supak Pakkawatpisuttiporn.</p>
+<!-- Profile Image -->
+<div class="profile">
+  <img src="supak.jpg" alt="Supak Profile Picture">
+</div>
+
+<!-- Gallery -->
+<h2>กิจกรรมการเรียนรู้</h2>
+<div class="gallery">
+  <img src="photo1.jpg" alt="Activity 1">
+  <img src="photo2.jpg" alt="Activity 2">
+  <img src="photo3.jpg" alt="Activity 3">
+  <img src="photo4.jpg" alt="Activity 4">
+  <img src="photo5.jpg" alt="Activity 5">
+  <img src="photo6.jpg" alt="Activity 6">
+</div>
+
+<!-- Typing Study Button -->
+<div class="typing-button">
+  <a href="https://www.typingstudy.com/th-thai_kedmanee-3/" target="_blank">ไปยังเว็บไซต์พิมพ์ดีดสัมผัส</a>
+</div>
+
+<!-- Calendar -->
+<h2>ปฏิทินกิจกรรม</h2>
+<div class="calendar">
+  <iframe src="https://calendar.google.com/calendar/embed?src=th.th%23holiday%40group.v.calendar.google.com&ctz=Asia%2FBangkok" style="border: 0" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<!-- Visitor Counter -->
+<div class="visitor">
+  <p>ผู้เข้าชมวันนี้: 5</p>
+  <p>ผู้เข้าชมเมื่อวานนี้: 12</p>
+  <p>จำนวนผู้เข้าชมทั้งหมด: 1,245</p>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Supak Pakkawatpisuttiporn. All rights reserved.
+</footer>
 
 </body>
 </html>
+
