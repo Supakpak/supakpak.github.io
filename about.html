@@ -3,177 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Me - Supak Pakkawatpisuttiporn</title>
+  <title>Personal Profile - Supakpak's Portfolio</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: Arial, sans-serif;
       background-color: #f0f8ff;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      color: #333;
+      font-family: Arial, sans-serif;
     }
-
-    .navbar {
-      display: flex;
-      justify-content: center;
+    header {
+      position: relative;
+      text-align: center;
+    }
+    header img {
+      width: 100%;
+      height: auto;
+    }
+    nav {
       background-color: #0056b3;
-      padding: 10px;
-      gap: 30px;
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
-    .navbar a {
+    nav a {
+      float: left;
+      display: block;
       color: white;
+      text-align: center;
+      padding: 14px 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
     }
-
-    .navbar a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      background-color: #003d80;
     }
-
     .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1, h2 {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
       text-align: center;
-      color: #0056b3;
     }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      text-align: left;
-    }
-
-    a {
-      color: #0056b3;
-    }
-
     .profile-pic {
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-
-    .profile-pic img {
       width: 200px;
       border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      margin: 20px 0;
     }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-      justify-items: center;
+    h1, h2 {
+      color: #003366;
     }
-
-    .gallery img {
-      width: 100%;
-      max-width: 250px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin-top: 10px;
     }
-
-    .gallery img:hover {
-      transform: scale(1.05);
+    li {
+      margin-bottom: 10px;
     }
-
-    #lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      flex-direction: row;
-    }
-
-    #lightbox-img {
-      max-width: 95%;
-      max-height: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.2);
-    }
-
-    #prev, #next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
+    strong {
       font-weight: bold;
-      font-size: 30px;
-      transition: 0.3s;
-      user-select: none;
-      z-index: 10000;
-    }
-
-    #prev {
-      left: 20px;
-    }
-
-    #next {
-      right: 20px;
-    }
-
-    #prev:hover, #next:hover {
-      color: #f1f1f1;
-    }
-
-    #close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
-      font-weight: bold;
-      color: white;
-      cursor: pointer;
-      z-index: 10001;
-    }
-
-    #close:hover {
-      color: #ccc;
     }
   </style>
 </head>
-
 <body>
 
-<nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="#gallery">Gallery</a>
+<!-- Banner -->
+<header>
+  <img src="banner.jpg" alt="Banner">
+</header>
+
+<!-- Navbar -->
+<nav>
+  <a href="index.html">หน้าแรก</a>
+  <a href="about.html">ข้อมูลประวัติ</a>
+  <a href="#">E-Portfolio</a>
+  <a href="#">ผลงานที่น่าภาคภูมิใจ</a>
+  <a href="#">ห้องเรียนครู Supak</a>
+  <a href="#">ผลงานผู้เรียน</a>
+  <a href="#">แหล่งความรู้</a>
+  <a href="#">แบ่งปันการสอน</a>
 </nav>
 
+<!-- Content -->
 <div class="container">
   <h1>Personal Profile</h1>
-
-  <div class="profile-pic">
-    <img src="supakpak.jpg" alt="Supak Pakkawatpisuttiporn">
-  </div>
+  <img src="supak.jpg" alt="Supak Pakkawatpisuttiporn" class="profile-pic">
 
   <h2>Mr. Supak Pakkawatpisuttiporn</h2>
   <p><strong>Position:</strong> Senior Professional Level Teacher</p>
@@ -194,95 +107,22 @@
   <h2>Education Background:</h2>
   <ul>
     <li>Bachelor of Education (Second-Class Honors), Chiang Mai Rajabhat University, Thailand</li>
-    <li>Postgraduate Certificate in Applied Linguistics, RELC, Singapore</li>
+    <li>Postgraduate Certificate in Applied Linguistics, Regional Language Centre (RELC), Singapore</li>
     <li>Certificate in Teaching English to Young Learners (TEYL), University of Oregon, USA</li>
   </ul>
 
   <h2>Work Experience:</h2>
   <ul>
-    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand)</li>
-    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand)</li>
-    <li>PEER Center Coordinator (2013-2017)</li>
+    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand</li>
+    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand</li>
+    <li>PEER Center Coordinator (Primary Education English Resource Center) in Wiang Haeng District (2013-2017)</li>
     <li>Teacher counterpart to Peace Corps volunteer under the TCCS Project (2015-2016)</li>
   </ul>
 
-  <h2 id="gallery">My Photo Gallery</h2>
-
-  <div class="gallery">
-    <img src="photo01.jpg" alt="photo01" onclick="openLightbox(this)">
-    <img src="photo02.jpg" alt="photo02" onclick="openLightbox(this)">
-    <img src="photo03.JPG" alt="photo03" onclick="openLightbox(this)">
-    <img src="photo04.jpg" alt="photo04" onclick="openLightbox(this)">
-    <img src="photo05.jpg" alt="photo05" onclick="openLightbox(this)">
-    <img src="photo06.jpg" alt="photo06" onclick="openLightbox(this)">
-    <img src="photo07.jpg" alt="photo07" onclick="openLightbox(this)">
-    <img src="photo08.jpg" alt="photo08" onclick="openLightbox(this)">
-    <img src="photo09.jpg" alt="photo09" onclick="openLightbox(this)">
-    <img src="photo10.jpg" alt="photo10" onclick="openLightbox(this)">
-  </div>
-
-  <div id="lightbox" onclick="backgroundClick(event)">
-    <span id="close" onclick="closeLightbox()">×</span>
-    <span id="prev" onclick="event.stopPropagation(); changeImage(-1);">&#10094;</span>
-    <img id="lightbox-img" src="">
-    <span id="next" onclick="event.stopPropagation(); changeImage(1);">&#10095;</span>
-  </div>
-
-  <h2>International Conferences and Seminars:</h2>
-  <ul>
-    <li>Women's Leadership Forum, Vietnam (2016)</li>
-    <li>Service Learning Strategy for EFL Teachers, USA (2017)</li>
-    <li>22nd AsiaTEFL International Conference, Thailand (2024)</li>
-  </ul>
-
-  <p style="text-align:center; margin-top: 30px;">
-    <a href="index.html">Back to Home</a>
-  </p>
-
 </div>
-
-<script>
-let currentIndex = 0;
-let images = [];
-
-document.addEventListener("DOMContentLoaded", function() {
-  images = Array.from(document.querySelectorAll(".gallery img"));
-  document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-      closeLightbox();
-    }
-  });
-});
-
-function openLightbox(imgElement) {
-  const src = imgElement.src;
-  currentIndex = images.findIndex(img => img.src === src);
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox').style.display = 'flex';
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-}
-
-function changeImage(direction) {
-  currentIndex += direction;
-  if (currentIndex < 0) {
-    currentIndex = images.length - 1;
-  } else if (currentIndex >= images.length) {
-    currentIndex = 0;
-  }
-  document.getElementById('lightbox-img').src = images[currentIndex].src;
-}
-
-function backgroundClick(event) {
-  if (event.target.id === 'lightbox') {
-    closeLightbox();
-  }
-}
-</script>
 
 </body>
 </html>
+
 
 
