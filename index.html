@@ -1,71 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <title>Supakpak's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f0f8ff; /* สีพื้นหลังฟ้าอ่อน */
-            text-align: center; /* ให้ข้อความอยู่ตรงกลาง */
-            font-family: 'Poppins', sans-serif; /* ฟอนต์สวย */
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <title>Supak's Website - หน้าแรก</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+    }
 
-        /* Hero Banner */
-        .hero {
-            width: 100%;
-            height: 500px;
-            background: url('banner.jpg') no-repeat center center/cover;
-        }
+    /* Navbar */
+    .navbar {
+      overflow: hidden;
+      background-color: #0056b3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        img {
-            border: 5px solid #555;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
+    .navbar a, .dropdown-btn {
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
+    .navbar a:hover, .dropdown:hover .dropdown-btn {
+      background-color: #003d80;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #0056b3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 220px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 8px;
+      overflow: hidden;
+    }
 
-        .button:hover {
-            background-color: #003d80;
-        }
-    </style>
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-weight: normal;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Hero Section */
+    .hero {
+      width: 100%;
+      height: 500px;
+      background: url('banner.jpg') no-repeat center center/cover;
+    }
+
+    h1 {
+      margin-top: 30px;
+      color: #0056b3;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 20px auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Hero Banner Section -->
-    <section class="hero"></section>
+<!-- Navbar -->
+<div class="navbar">
+  <a href="index.html">หน้าแรก</a>
 
-    <!-- Main Content -->
-    <h1>สวัสดีครับ, I'm Supak!</h1>
-    <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ครับ.</p>
+  <div class="dropdown">
+    <div class="dropdown-btn">E-portfolio ▾</div>
+    <div class="dropdown-content">
+      <a href="practice-behavior.html">การปฏิบัติตน</a>
+      <a href="practice-work.html">การปฏิบัติงาน</a>
+      <a href="innovation.html">สื่อและนวัตกรรม</a>
+    </div>
+  </div>
 
-    <img src="supak.jpg" alt="Supakpak's Photo" width="300">
+  <div class="dropdown">
+    <div class="dropdown-btn">ผลงานที่น่าภาคภูมิใจ ▾</div>
+    <div class="dropdown-content">
+      <a href="teacher-achievements.html">ผลงานครู</a>
+      <a href="student-achievements.html">ผลงานนักเรียน</a>
+    </div>
+  </div>
 
-    <p>Thanks for visiting my page!</p>
+  <div class="dropdown">
+    <div class="dropdown-btn">ห้องเรียน ครู Supak ▾</div>
+    <div class="dropdown-content">
+      <a href="listening-speaking.html">ภาษาอังกฤษ ฟัง-พูด</a>
+      <a href="english-studies.html">ภาษาอังกฤษศึกษา</a>
+      <a href="to-be-number-one.html">ชมรม TO BE NUMBER ONE</a>
+    </div>
+  </div>
 
-    <a href="about.html" class="button">Go to About Me</a>
+  <a href="student-work.html">ผลงานผู้เรียน</a>
+
+  <div class="dropdown">
+    <div class="dropdown-btn">แหล่งความรู้ ▾</div>
+    <div class="dropdown-content">
+      <a href="english-you-and-me.html">English You and Me</a>
+      <a href="hcec-svk.html">HCEC สันป่าตองวิทยาคม</a>
+      <a href="to-be-number-one-svk.html">TO BE NUMBER ONE SVK</a>
+      <a href="other-resources.html">แหล่งเรียนรู้อื่น</a>
+    </div>
+  </div>
+
+  <a href="teaching-sharing.html">แบ่งปันการสอน</a>
+
+  <a href="profile.html">ข้อมูลประวัติ</a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero"></section>
+
+<!-- Main Content -->
+<h1>สวัสดีครับ ยินดีต้อนรับ!</h1>
+<p>นี่คือเว็บไซต์ของครู Supak Pakkawatpisuttiporn.</p>
 
 </body>
 </html>
