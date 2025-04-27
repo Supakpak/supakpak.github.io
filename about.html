@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me - Supak Pakkawatpisuttiporn</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f8ff;
@@ -106,8 +110,8 @@
     }
 
     #lightbox-img {
-      max-width: 90%;
-      max-height: 80%;
+      max-width: 95%;
+      max-height: 90%;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
@@ -138,8 +142,24 @@
     #prev:hover, #next:hover {
       color: #f1f1f1;
     }
+
+    #close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      z-index: 10001;
+    }
+
+    #close:hover {
+      color: #ccc;
+    }
   </style>
 </head>
+
 <body>
 
 <nav class="navbar">
@@ -180,8 +200,8 @@
 
   <h2>Work Experience:</h2>
   <ul>
-    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand</li>
-    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand</li>
+    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand)</li>
+    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand)</li>
     <li>PEER Center Coordinator (2013-2017)</li>
     <li>Teacher counterpart to Peace Corps volunteer under the TCCS Project (2015-2016)</li>
   </ul>
@@ -202,6 +222,7 @@
   </div>
 
   <div id="lightbox" onclick="backgroundClick(event)">
+    <span id="close" onclick="closeLightbox()">×</span>
     <span id="prev" onclick="event.stopPropagation(); changeImage(-1);">&#10094;</span>
     <img id="lightbox-img" src="">
     <span id="next" onclick="event.stopPropagation(); changeImage(1);">&#10095;</span>
