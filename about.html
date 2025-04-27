@@ -47,10 +47,6 @@
       color: #0056b3;
     }
 
-    img {
-      border-radius: 10px;
-    }
-
     ul {
       list-style-type: disc;
       padding-left: 20px;
@@ -59,6 +55,18 @@
 
     a {
       color: #0056b3;
+    }
+
+    .profile-pic {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic img {
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
     }
 
     .gallery {
@@ -94,9 +102,10 @@
       align-items: center;
       justify-content: center;
       z-index: 9999;
+      flex-direction: row;
     }
 
-    #lightbox img {
+    #lightbox-img {
       max-width: 90%;
       max-height: 80%;
       border-radius: 10px;
@@ -141,7 +150,10 @@
 
 <div class="container">
   <h1>Personal Profile</h1>
-  <img src="supakpak.jpg" alt="Supak Pakkawatpisuttiporn" width="200">
+
+  <div class="profile-pic">
+    <img src="supakpak.jpg" alt="Supak Pakkawatpisuttiporn">
+  </div>
 
   <h2>Mr. Supak Pakkawatpisuttiporn</h2>
   <p><strong>Position:</strong> Senior Professional Level Teacher</p>
@@ -168,8 +180,8 @@
 
   <h2>Work Experience:</h2>
   <ul>
-    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand)</li>
-    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand)</li>
+    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand</li>
+    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand</li>
     <li>PEER Center Coordinator (2013-2017)</li>
     <li>Teacher counterpart to Peace Corps volunteer under the TCCS Project (2015-2016)</li>
   </ul>
@@ -189,10 +201,10 @@
     <img src="photo10.jpg" alt="photo10" onclick="openLightbox(this)">
   </div>
 
-  <div id="lightbox">
-    <span id="prev" onclick="changeImage(-1)">&#10094;</span>
+  <div id="lightbox" onclick="backgroundClick(event)">
+    <span id="prev" onclick="event.stopPropagation(); changeImage(-1);">&#10094;</span>
     <img id="lightbox-img" src="">
-    <span id="next" onclick="changeImage(1)">&#10095;</span>
+    <span id="next" onclick="event.stopPropagation(); changeImage(1);">&#10095;</span>
   </div>
 
   <h2>International Conferences and Seminars:</h2>
@@ -205,6 +217,7 @@
   <p style="text-align:center; margin-top: 30px;">
     <a href="index.html">Back to Home</a>
   </p>
+
 </div>
 
 <script>
@@ -213,6 +226,11 @@ let images = [];
 
 document.addEventListener("DOMContentLoaded", function() {
   images = Array.from(document.querySelectorAll(".gallery img"));
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+  });
 });
 
 function openLightbox(imgElement) {
@@ -235,8 +253,15 @@ function changeImage(direction) {
   }
   document.getElementById('lightbox-img').src = images[currentIndex].src;
 }
+
+function backgroundClick(event) {
+  if (event.target.id === 'lightbox') {
+    closeLightbox();
+  }
+}
 </script>
 
 </body>
 </html>
+
 
