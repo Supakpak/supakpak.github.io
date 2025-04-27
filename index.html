@@ -3,24 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Supakpak's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: #f0f8ff; /* สีพื้นหลังฟ้าอ่อน */
             text-align: center; /* ให้ข้อความอยู่ตรงกลาง */
-            font-family: Arial, sans-serif; /* เปลี่ยนฟอนต์ */
+            font-family: 'Poppins', sans-serif; /* เปลี่ยนฟอนต์สวยขึ้น */
+            margin: 0;
+            padding: 0;
         }
+
+        /* Hero Banner */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: url('banner.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin: 0;
+        }
+
+        .hero-text p {
+            font-size: 24px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+            margin-top: 10px;
+        }
+
         img {
             border: 5px solid #555; /* ใส่กรอบรูปสีเทาเข้ม */
             border-radius: 10px; /* ทำให้กรอบมน ๆ */
             margin-top: 20px; /* ขยับรูปลงมาจากหัวข้อ */
         }
+
         a {
             color: #0066cc; /* สีลิงก์ */
             text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
         }
+
         a:hover {
             text-decoration: underline; /* เอาเส้นใต้กลับมาเวลาเอาเม้าส์ไปวาง */
         }
+
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -30,11 +63,25 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #003d80;
         }
     </style>
 </head>
 <body>
 
+    <!-- Hero Banner Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Supak's Website</h1>
+        <p>Explore my portfolio and projects!</p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
     <h1>สวัสดีครับ, I'm Supak!</h1>
     <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ครับ.</p>
 
@@ -42,8 +89,8 @@
 
     <p>Thanks for visiting my page!</p>
 
- 
     <a href="about.html" class="button">Go to About Me</a>
 
 </body>
 </html>
+
