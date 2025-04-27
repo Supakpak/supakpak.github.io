@@ -1,189 +1,97 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Supakpak's Portfolio</title>
+  <title>Kru Supak Official Website</title>
   <style>
     body {
-      background-color: #f0f8ff;
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
     }
-    header {
-      position: relative;
-      text-align: center;
-    }
-    header img {
+
+    /* Banner */
+    .banner {
       width: 100%;
       height: auto;
     }
-    nav {
+
+    /* Navbar */
+    .navbar {
       background-color: #0056b3;
       overflow: hidden;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    nav a {
-      float: left;
-      display: block;
+
+    .navbar a {
       color: white;
-      text-align: center;
       padding: 14px 20px;
       text-decoration: none;
+      text-align: center;
       font-weight: bold;
     }
-    nav a:hover {
+
+    .navbar a:hover {
       background-color: #003d80;
     }
-    .container {
+
+    /* Content */
+    .content {
       text-align: center;
-      padding: 60px 20px 20px 20px; /* เลื่อนลงมา 60px */
+      padding: 30px;
     }
+
     .profile-pic {
-      width: 200px;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
       border-radius: 50%;
-      margin-top: 20px;
       border: 5px solid white;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-top: -90px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+
     h1 {
-      margin-top: 10px;
       color: #003366;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin: 40px 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    .section-title {
-      text-align: center;
-      font-size: 24px;
-      margin: 40px 0 20px;
-      color: #003366;
-      font-weight: bold;
-    }
-    .link-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin: 40px 20px;
-    }
-    .link-buttons a {
-      background-color: #0056b3;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .link-buttons a:hover {
-      background-color: #003d80;
-    }
-    iframe {
-      border: none;
       margin-top: 20px;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #0056b3;
-      color: white;
-      margin-top: 40px;
+
+    p {
+      color: #333;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
 
-<!-- Banner -->
-<header>
-  <img src="banner.jpg" alt="Banner">
-</header>
+  <!-- Banner -->
+  <img src="banner.jpg" alt="Welcome to Kru Supak" class="banner">
 
-<!-- Navbar -->
-<nav>
-  <a href="index.html">หน้าแรก</a>
-  <a href="about.html">ข้อมูลประวัติ</a>
-  <a href="#">E-Portfolio</a>
-  <a href="#">ผลงานที่น่าภาคภูมิใจ</a>
-  <a href="#">ห้องเรียนครู Supak</a>
-  <a href="#">ผลงานผู้เรียน</a>
-  <a href="#">แหล่งความรู้</a>
-  <a href="#">แบ่งปันการสอน</a>
-</nav>
-
-<!-- Profile -->
-<div class="container">
-  <img src="supak.jpg" alt="Supak Pakkawatpisuttiporn" class="profile-pic">
-  <h1>สวัสดีครับ, I'm Teacher Supak!</h1>
-  <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ของครูนะครับ</p>
-</div>
-
-<!-- Gallery -->
-<h2 class="section-title">กิจกรรมการเรียนรู้</h2>
-<div class="gallery">
-  <img src="photo1.jpg" alt="Activity 1">
-  <img src="photo2.jpg" alt="Activity 2">
-  <img src="photo3.jpg" alt="Activity 3">
-  <img src="photo4.jpg" alt="Activity 4">
-  <img src="photo5.jpg" alt="Activity 5">
-  <img src="photo6.jpg" alt="Activity 6">
-</div>
-
-<!-- Link Buttons Section -->
-<h2 class="section-title">เว็บไซต์ที่เกี่ยวข้อง</h2>
-<div class="link-buttons">
-  <a href="http://www.svk.ac.th/" target="_blank">โรงเรียนสันป่าตองวิทยาคม</a>
-  <a href="http://svkict.svk.ac.th/index.php" target="_blank">ระบบเช็คสถิตินักเรียน</a>
-  <a href="https://www.seccm.go.th/" target="_blank">สพม.เชียงใหม่</a>
-  <a href="https://www.obec.go.th/" target="_blank">สพฐ.</a>
-  <a href="https://www.chiangmai.go.th/newweb/" target="_blank">จังหวัดเชียงใหม่</a>
-  <a href="https://www.typingstudy.com/th-thai_kedmanee-3/" target="_blank">พิมพ์ดีดสัมผัส</a>
-</div>
-
-<!-- Calendar -->
-<h2 class="section-title">ปฏิทินกิจกรรม</h2>
-<div class="container">
-  <iframe src="https://calendar.google.com/calendar/embed?src=th.th%23holiday%40group.v.calendar.google.com&ctz=Asia%2FBangkok" 
-          style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no">
-  </iframe>
-</div>
-
-<!-- Visitor Counter -->
-<h2 class="section-title">จำนวนผู้เข้าชม</h2>
-<div class="container">
-  <div style="margin-top: 20px;">
-    <a href="https://www.freecounterstat.com" title="free website counter">
-      <img src="https://counter7.stat.ovh/private/freecounterstat.php?c=9g8fxx8k5q1ud8e8pb6wbj6zkpu0zpxk" 
-           border="0" 
-           title="free website counter" 
-           alt="free website counter">
-    </a>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html">หน้าแรก</a>
+    <a href="about.html">ข้อมูลประวัติ</a>
+    <a href="portfolio.html">E-Portfolio</a>
+    <a href="achievement.html">ผลงานที่น่าภาคภูมิใจ</a>
+    <a href="classroom.html">ห้องเรียนครู Supak</a>
+    <a href="students.html">ผลงานผู้เรียน</a>
+    <a href="resources.html">แหล่งความรู้</a>
+    <a href="sharing.html">แบ่งปันการสอน</a>
   </div>
-</div>
 
-<!-- Footer -->
-<footer>
-  เว็บไซต์จัดทำโดย ครู Supak © 2025
-</footer>
+  <!-- Content -->
+  <div class="content">
+    <img src="supak.jpg" alt="Supak Pakkawatpisuttiporn" class="profile-pic">
+    <h1>สวัสดีครับ, I'm Supak!</h1>
+    <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ของผม</p>
+  </div>
 
 </body>
 </html>
+
 
 
 
