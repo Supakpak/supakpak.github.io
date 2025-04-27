@@ -8,16 +8,34 @@
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f8ff;
-      margin: 20px;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
       color: #333;
-      text-align: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #0056b3;
+      padding: 10px;
+      gap: 30px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
     }
 
     .container {
-      max-width: 800px;
-      margin: auto;
+      max-width: 1000px;
+      margin: 30px auto;
       background: white;
       padding: 30px;
       border-radius: 10px;
@@ -25,6 +43,7 @@
     }
 
     h1, h2 {
+      text-align: center;
       color: #0056b3;
     }
 
@@ -57,6 +76,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .gallery img:hover {
@@ -82,9 +102,42 @@
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255,255,255,0.2);
     }
+
+    #prev, #next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      transition: 0.3s;
+      user-select: none;
+      z-index: 10000;
+    }
+
+    #prev {
+      left: 20px;
+    }
+
+    #next {
+      right: 20px;
+    }
+
+    #prev:hover, #next:hover {
+      color: #f1f1f1;
+    }
   </style>
 </head>
 <body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="#gallery">Gallery</a>
+</nav>
 
 <div class="container">
   <h1>Personal Profile</h1>
@@ -115,13 +168,13 @@
 
   <h2>Work Experience:</h2>
   <ul>
-    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand</li>
-    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand</li>
+    <li>Interpreter for police investigators during the 18th SEA Games (1995), Chiang Mai, Thailand)</li>
+    <li>Mentor teacher for Korean students during TIMC 2016, Chiang Mai, Thailand)</li>
     <li>PEER Center Coordinator (2013-2017)</li>
     <li>Teacher counterpart to Peace Corps volunteer under the TCCS Project (2015-2016)</li>
   </ul>
 
-  <h2>My Photo Gallery</h2>
+  <h2 id="gallery">My Photo Gallery</h2>
 
   <div class="gallery">
     <img src="photo01.jpg" alt="photo01" onclick="openLightbox(this)">
@@ -136,8 +189,10 @@
     <img src="photo10.jpg" alt="photo10" onclick="openLightbox(this)">
   </div>
 
-  <div id="lightbox" onclick="closeLightbox()">
+  <div id="lightbox">
+    <span id="prev" onclick="changeImage(-1)">&#10094;</span>
     <img id="lightbox-img" src="">
+    <span id="next" onclick="changeImage(1)">&#10095;</span>
   </div>
 
   <h2>International Conferences and Seminars:</h2>
@@ -150,19 +205,38 @@
   <p style="text-align:center; margin-top: 30px;">
     <a href="index.html">Back to Home</a>
   </p>
-
 </div>
 
 <script>
+let currentIndex = 0;
+let images = [];
+
+document.addEventListener("DOMContentLoaded", function() {
+  images = Array.from(document.querySelectorAll(".gallery img"));
+});
+
 function openLightbox(imgElement) {
-  document.getElementById('lightbox-img').src = imgElement.src;
+  const src = imgElement.src;
+  currentIndex = images.findIndex(img => img.src === src);
+  document.getElementById('lightbox-img').src = src;
   document.getElementById('lightbox').style.display = 'flex';
 }
 
 function closeLightbox() {
   document.getElementById('lightbox').style.display = 'none';
 }
+
+function changeImage(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  } else if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
+  document.getElementById('lightbox-img').src = images[currentIndex].src;
+}
 </script>
 
 </body>
 </html>
+
