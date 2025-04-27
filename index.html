@@ -2,223 +2,137 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Supak's Website - หน้าแรก</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Supakpak's Portfolio</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
       background-color: #f0f8ff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      position: relative;
       text-align: center;
+      color: white;
     }
-
-    /* Navbar */
-    .navbar {
-      overflow: hidden;
+    header img {
+      width: 100%;
+      height: auto;
+    }
+    nav {
       background-color: #0056b3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+      overflow: hidden;
     }
-
-    .navbar a, .dropdown-btn {
-      font-size: 16px;
+    nav a {
+      float: left;
+      display: block;
       color: white;
       text-align: center;
-      padding: 14px 16px;
+      padding: 14px 20px;
       text-decoration: none;
-      cursor: pointer;
       font-weight: bold;
     }
-
-    .navbar a:hover, .dropdown:hover .dropdown-btn {
+    nav a:hover {
       background-color: #003d80;
     }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
+    .container {
+      text-align: center;
+      padding: 40px 20px;
     }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #ffffff;
-      min-width: 220px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-      z-index: 1;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-      font-weight: normal;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f0f0f0;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* Banner */
-    .hero {
-      width: 100%;
-      height: 500px;
-      background: url('banner.jpg') no-repeat center center/cover;
-    }
-
-    /* Profile Image */
-    .profile {
-      margin-top: -100px;
-    }
-
-    .profile img {
+    .profile-pic {
       width: 200px;
-      height: 200px;
       border-radius: 50%;
+      margin-top: -100px;
       border: 5px solid white;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      background-color: white;
+      background: white;
     }
-
-    /* Gallery */
+    h1 {
+      margin-top: 10px;
+      color: #003366;
+    }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
       margin: 40px 20px;
     }
-
     .gallery img {
       width: 100%;
-      height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-
     .gallery img:hover {
       transform: scale(1.05);
     }
-
-    /* Typing Study Button */
-    .typing-button {
-      margin: 30px;
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      margin: 40px 0 20px;
+      color: #003366;
+      font-weight: bold;
     }
-
-    .typing-button a {
+    iframe {
+      border: none;
+      margin-top: 20px;
+    }
+    .link-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 20px;
+    }
+    .link-buttons a {
       background-color: #0056b3;
       color: white;
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       transition: background-color 0.3s;
     }
-
-    .typing-button a:hover {
+    .link-buttons a:hover {
       background-color: #003d80;
     }
-
-    /* Calendar */
-    .calendar {
-      margin: 40px 20px;
-    }
-
-    iframe {
-      border: 0;
-      width: 100%;
-      max-width: 700px;
-      height: 500px;
-    }
-
-    /* Visitor Counter */
-    .visitor {
-      margin: 40px;
-      font-size: 18px;
-      color: #333;
-    }
-
-    /* Footer */
     footer {
-      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
       background-color: #0056b3;
       color: white;
-      padding: 10px;
-      font-size: 14px;
+      margin-top: 40px;
     }
   </style>
 </head>
-
 <body>
 
+<!-- Banner -->
+<header>
+  <img src="banner.jpg" alt="Banner">
+</header>
+
 <!-- Navbar -->
-<div class="navbar">
+<nav>
   <a href="index.html">หน้าแรก</a>
+  <a href="about.html">ข้อมูลประวัติ</a>
+  <a href="#">E-Portfolio</a>
+  <a href="#">ผลงานที่น่าภาคภูมิใจ</a>
+  <a href="#">ห้องเรียนครู Supak</a>
+  <a href="#">ผลงานผู้เรียน</a>
+  <a href="#">แหล่งความรู้</a>
+  <a href="#">แบ่งปันการสอน</a>
+</nav>
 
-  <div class="dropdown">
-    <div class="dropdown-btn">E-portfolio ▾</div>
-    <div class="dropdown-content">
-      <a href="practice-behavior.html">การปฏิบัติตน</a>
-      <a href="practice-work.html">การปฏิบัติงาน</a>
-      <a href="innovation.html">สื่อและนวัตกรรม</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <div class="dropdown-btn">ผลงานที่น่าภาคภูมิใจ ▾</div>
-    <div class="dropdown-content">
-      <a href="teacher-achievements.html">ผลงานครู</a>
-      <a href="student-achievements.html">ผลงานนักเรียน</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <div class="dropdown-btn">ห้องเรียน ครู Supak ▾</div>
-    <div class="dropdown-content">
-      <a href="listening-speaking.html">ภาษาอังกฤษ ฟัง-พูด</a>
-      <a href="english-studies.html">ภาษาอังกฤษศึกษา</a>
-      <a href="to-be-number-one.html">ชมรม TO BE NUMBER ONE</a>
-    </div>
-  </div>
-
-  <a href="student-work.html">ผลงานผู้เรียน</a>
-
-  <div class="dropdown">
-    <div class="dropdown-btn">แหล่งความรู้ ▾</div>
-    <div class="dropdown-content">
-      <a href="english-you-and-me.html">English You and Me</a>
-      <a href="hcec-svk.html">HCEC สันป่าตองวิทยาคม</a>
-      <a href="to-be-number-one-svk.html">TO BE NUMBER ONE SVK</a>
-      <a href="other-resources.html">แหล่งเรียนรู้อื่น</a>
-    </div>
-  </div>
-
-  <a href="teaching-sharing.html">แบ่งปันการสอน</a>
-
-  <a href="profile.html">ข้อมูลประวัติ</a>
-</div>
-
-<!-- Hero Banner -->
-<section class="hero"></section>
-
-<!-- Profile Image -->
-<div class="profile">
-  <img src="supak.jpg" alt="Supak Profile Picture">
+<!-- Profile -->
+<div class="container">
+  <img src="supak.jpg" alt="Supak Pakkawatpisuttiporn" class="profile-pic">
+  <h1>สวัสดีครับ, I'm Supak!</h1>
+  <p>ยินดีต้อนรับเข้าสู่เว็บไซต์ของผม</p>
 </div>
 
 <!-- Gallery -->
-<h2>กิจกรรมการเรียนรู้</h2>
+<h2 class="section-title">กิจกรรมการเรียนรู้</h2>
 <div class="gallery">
   <img src="photo1.jpg" alt="Activity 1">
   <img src="photo2.jpg" alt="Activity 2">
@@ -228,29 +142,44 @@
   <img src="photo6.jpg" alt="Activity 6">
 </div>
 
-<!-- Typing Study Button -->
-<div class="typing-button">
-  <a href="https://www.typingstudy.com/th-thai_kedmanee-3/" target="_blank">ไปยังเว็บไซต์พิมพ์ดีดสัมผัส</a>
+<!-- Link Buttons Section -->
+<h2 class="section-title">เว็บไซต์ที่เกี่ยวข้อง</h2>
+<div class="link-buttons">
+  <a href="http://www.svk.ac.th/" target="_blank">โรงเรียนสันป่าตองวิทยาคม</a>
+  <a href="http://svkict.svk.ac.th/index.php" target="_blank">ระบบเช็คสถิตินักเรียน</a>
+  <a href="https://www.seccm.go.th/" target="_blank">สพม.เชียงใหม่</a>
+  <a href="https://www.obec.go.th/" target="_blank">สพฐ.</a>
+  <a href="https://www.chiangmai.go.th/newweb/" target="_blank">จังหวัดเชียงใหม่</a>
+  <a href="https://www.typingstudy.com/th-thai_kedmanee-3/" target="_blank">พิมพ์ดีดสัมผัส</a>
 </div>
 
 <!-- Calendar -->
-<h2>ปฏิทินกิจกรรม</h2>
-<div class="calendar">
-  <iframe src="https://calendar.google.com/calendar/embed?src=th.th%23holiday%40group.v.calendar.google.com&ctz=Asia%2FBangkok" style="border: 0" frameborder="0" scrolling="no"></iframe>
+<h2 class="section-title">ปฏิทินกิจกรรม</h2>
+<div class="container">
+  <iframe src="https://calendar.google.com/calendar/embed?src=th.th%23holiday%40group.v.calendar.google.com&ctz=Asia%2FBangkok" 
+          style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no">
+  </iframe>
 </div>
 
 <!-- Visitor Counter -->
-<div class="visitor">
-  <p>ผู้เข้าชมวันนี้: 5</p>
-  <p>ผู้เข้าชมเมื่อวานนี้: 12</p>
-  <p>จำนวนผู้เข้าชมทั้งหมด: 1,245</p>
+<h2 class="section-title">จำนวนผู้เข้าชม</h2>
+<div class="container">
+  <div style="margin-top: 20px;">
+    <a href="https://www.freecounterstat.com" title="free website counter">
+      <img src="https://counter7.stat.ovh/private/freecounterstat.php?c=9g8fxx8k5q1ud8e8pb6wbj6zkpu0zpxk" 
+           border="0" 
+           title="free website counter" 
+           alt="free website counter">
+    </a>
+  </div>
 </div>
 
 <!-- Footer -->
 <footer>
-  &copy; 2025 Supak Pakkawatpisuttiporn. All rights reserved.
+  เว็บไซต์จัดทำโดย ครู Supak © 2025
 </footer>
 
 </body>
 </html>
+
 
